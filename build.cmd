@@ -786,8 +786,8 @@ if "%BUILD_SETUP%" == "1" (
 )
 
 if not "%SIGN_TYPE%" == "" (
-    echo build\scripts\run-signtool.cmd -MSBuild %_msbuildexe% -SignType %SIGN_TYPE% -ConfigFile build\config\MsiSignToolData.json
-    call build\scripts\run-signtool.cmd -MSBuild %_msbuildexe% -SignType %SIGN_TYPE% -ConfigFile build\config\MsiSignToolData.json
+    echo build\scripts\run-signtool.cmd -MSBuild %_msbuildexe% -SignType %SIGN_TYPE% -ConfigFile build\config\PackageSignToolData.json
+    call build\scripts\run-signtool.cmd -MSBuild %_msbuildexe% -SignType %SIGN_TYPE% -ConfigFile build\config\PackageSignToolData.json
     if ERRORLEVEL 1 echo Error running sign tool && goto :failure
 )
 
